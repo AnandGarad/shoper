@@ -1,0 +1,237 @@
+body{
+    font-family: 'Overpass', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
+ .nav-link{
+    font-size: 17px;
+    letter-spacing: 1px;
+ }
+ .navbar-brand{
+    letter-spacing: 1px;
+ }
+   /* section  */
+ .image-1{
+    height: 70vh;
+    background-image: url("../imges/Women-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment:local;
+    
+ }
+ .image-1:hover{
+    opacity: 0.9;
+ }
+ .image-2{
+    height: 70vh;
+    background-image: url("../imges/man-1.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  background-attachment:local; 
+ }
+ .image-2:hover{
+    opacity: 0.9;
+ }
+ .image-3{
+    height: 70vh;
+    background-image: url("../imges/kids.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  background-attachment:local;  
+ }
+ .image-3:hover{
+    opacity: 0.9;
+ }
+ /* text middle  */
+
+ .inner-man-div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    height: 90vh;
+ }
+
+ .inner-man-div div{
+    margin-top: 100px;
+ }
+   .women-shop:hover{
+    padding-right:10px;
+    margin-left: 10px;
+    transform: scaley(100deg);
+ }
+
+ /* secontion-div  */
+   .collection-div{
+      height: 200px;
+   }
+   .text-div p{
+      width: 80vh;
+      justify-content: center;
+      margin-top: 20px;
+   }
+   .div-1-col-image{
+      height: 60vh;
+    background-image: url("../imges/women-bag.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment:local;
+
+   }
+   .div-2-col-image{
+      height: 60vh;
+    background-image: url("../imges/shrt-man.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment:local;
+
+   }
+   .div-4-col-image{
+      height: 60vh;
+      background-image: url("../imges/jacket.jpeg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment:local;
+      
+   }
+   .div-3-col-image{
+      height: 60vh;
+      background-image: url("../imges/girl-dress.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment:local;
+   }
+
+   /* card section  */
+    .card-img{
+      height: 400px;
+    }
+    .card-1{
+      height: 400px;
+      background-image: url("../imges/sandel-1.webp");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment:local;
+   }
+   .card-1:hover{
+      background-image: url("../imges/sandel-2.webp");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      background-attachment:local;
+    }
+    .card-2{
+      height: 400px;
+      background-image: url("../imges/dress-2.webp");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment:local;
+   }
+   .card-2:hover{
+       background-image: url("../imges/dress-1.jpeg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment:local;
+    }
+    .card-3{
+      height: 400px;
+      background-image: url("../imges/shous-2.webp");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment:local;
+   }
+   .card-3:hover{
+       background-image: url("../imges/shoes-1.webp");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      background-attachment:local;
+    }
+
+    .card-4{
+      height: 400px;
+      background-image: url("../imges/scrt-1.jpeg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment:local;
+    }
+    .card-4:hover{
+      background-image: url("../imges/scrt-2.jpeg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment:local;
+    }
+
+    .card-5{
+      height: 400px;
+      background-image: url("../imges/midi-dress-1.jpeg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment:local;
+    }
+    
+    .card-6{
+      height: 400px;
+      background-image: url("../imges/clots-girls-2.webp");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment:local;
+    }
+    .card-6:hover{
+      background-image: url("../imges/colts-girl-1.jpeg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment:local;
+    }
+    .card-7{
+      height: 400px;
+      background-image: url("../imges/pers.jpeg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment:local;
+    }
+    .card-7:hover{
+      background-image: url("../imges/bag-2.jpeg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      background-attachment:local;
+    }
+
+    .card-8{
+      height: 400px;
+      background-image: url("../imges/sandel-4.webp");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment:local;
+    }
+    .card-8:hover{
+      background-image: url("../imges/sandal-3.jpeg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      background-attachment:local;
+    }
+
+      footer{
+        background-color: black;
+        height: 300px;
+      }

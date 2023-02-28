@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Shopper.com</title>
+    <!-- bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+     <!-- icons  -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <!-- css  -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+      function getProduct(url){
+         fetch(url).then(function(response){return response.json()}).then(function(Pdata){
+ 
+             document.getElementById("proTitle").innerHTML=`${Pdata.title}`;
+             document.getElementById("proImg").src=Pdata.image;
+              document.getElementById("Textdesc").innerHTML=` ${Pdata.description}`;
+         });
+
+      }
+
+     function pageload(){
+         getProduct("https://fakestoreapi.com/products/1")
+     }
+
+
+      var count = 0;
+          function nextClick(){
+            count++;
+            getProduct(`https://fakestoreapi.com/products/${count}`);
+          }
+          
+          function preClick(){
+            count--;
+            getProduct(`https://fakestoreapi.com/products/${count}`)
+          }
+</script>
+
+
+</head>
+<body onload="pageload()" class="container-fluid">
+      <header class="m-2 ">
+        <nav class="navbar navbar-expand-lg bg-body-light d-flex justify-content-between">
+            <div class="container-fluid">
+              <a class="navbar-brand fs-2 fw-bold text-dark" href="#">Shopper.</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-primary" aria-current="page" href="#" >Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Catalogs</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Shop
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Pages
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Blogs
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link">
+                        <span class="m-2 bi bi-search"></span>
+                        <span class="m-2 bi bi-person" ></span>
+                        <span class="m-2 bi bi-heart"></span>
+                        <!-- <span class="bi bi-"></span> -->
+                        <span class=" bi bi-cart  position-relative p-1">
+                            <span class="position-absolute top-0 start-100 translate-middle  bg-danger border border-light rounded-circle">2
+                            </span>
+                        </span>
+                    </a>
+                  </li>
+                </ul>
+              
+              </div>
+            </div>
+          </nav>
+          <div class="container-fluid bg-dark text-center p-3">
+                 <i class="bi bi-lightning-charge-fill text-warning"></i> <span class="text-light">Happy Holiday Deals on Everything</span> <i class="bi bi-lightning-charge-fill text-warning"></i>
+          </div>
+      </header>
+         <section> 
+          <div class="container-fluid">
+            <div class="row mt-2">
+              <div class="image-1 col-12 col-md-4 col-sm-12 col-lg-4">
+                  <div class="text-center align-items-center justify-content-center inner-man-div">
+                      <div class=" text-light fs-1 fw-bold mt-4 mb-3" >WOMEN</div>
+                      <button class="btn btn-light p-1  mt-4 women-shop">Shop Women <span class="bi bi-arrow-right "></span>
+                      </button>
+                  </div>
+              </div>
+              <div class="image-2 col-12 col-md-4 col-sm-12 col-lg-4">
+                  <div class="text-center align-items-center justify-content-center inner-man-div">
+                      <div class=" text-light fs-1 fw-bold mt-4 mb-3" >MEN</div>
+                      <button class="btn btn-light p-1  mt-4 women-shop">Shop Men <span class="bi bi-arrow-right "></span>
+                      </button>
+                  </div>
+              </div>
+              <div class="image-3 col-12 col-md-4 col-sm-12 col-lg-4">
+                  <div class="text-center align-items-center justify-content-center inner-man-div">
+                      <div class=" text-light fs-1 fw-bold mt-4 mb-3" >Kids</div>
+                      <button class="btn btn-light p-1  mt-4 women-shop">Shop Kids <span class="bi bi-arrow-right "></span>
+                      </button>
+                  </div>
+              </div>
+             </div>
+
+          </div>
+
+            <div class="container mt-2 p-3 bg-light  border-bottom">
+                  <div class="row mt-3">
+                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 d-flex ">
+                            <div class="m-1 bi bi-truck pe-2 text-danger fs-4"></div>
+                            <div>
+                                <p class="fs-5 fw-bold p-0 m-0"><a href="" class="nav-link">Free shipping</a></p>
+                                <p>From all orders over $100</p>
+                            </div>  
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 d-flex">
+                            <div class="m-1 bi bi-arrow-repeat pe-2 text-danger fs-4"></div>
+                            <div>
+                                <p class="fs-5 fw-bold p-0 m-0"><a href="" class="nav-link">Free returns</a></p>
+                                <p>Return money within 30 days</p>
+                            </div> 
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 d-flex">
+                            <div class="m-1 bi bi-lock pe-2 text-danger fs-4"></div>
+                            <div>
+                                <p class="fs-5 fw-bold p-0 m-0"><a href="" class="nav-link">Secure shopping</a></p>
+                                <p>You're in safe hands</p>
+                            </div> 
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 d-flex">
+                            <div class="m-1 bi bi-tag pe-2 text-danger fs-4"></div>
+                            <div>
+                                <p class="fs-5 fw-bold p-0 m-0"><a href="" class="nav-link">Over 10,000 Styles</a></p>
+                                <p>We have everything you need</p>
+                            </div> 
+                        </div>
+                  </div>
+            </div>
+         </section>
+         <section class=" m-4 p-4 ">
+                    <div class="col text-center collection-div">
+                          <div class="text-secondary">New Collection</div>
+                          <div class=" text-dark fs-2 fw-bolder">Best Picks 2019</div>
+                          <div class=" text-center text-div d-flex flex-column justify-content-center align-items-center">
+                            <p class=" text-center">Appear, dry there darkness they're seas, dry waters thing fly midst. Beast, above fly brought Very green. </p>                            
+                          </div>
+                    </div>
+         </section> 
+            <div class="row gap-4 d-flex justify-content-center align-items-center ">
+              <div class="col-12 col-md-4 col-lg-4 col-sm-12  div-1-col-image">
+                <div class="text-center align-items-center justify-content-center inner-man-div">
+                  <div class=" text-light fs-4 fw-bold mt-1 mb-3" >Bags Collection</div>
+                  <button class=" btn btn-light  mt-1 women-shop">Shop Now <span class="bi bi-arrow-right "></span>
+                  </button>
+              </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-6 col-sm-12 div-2-col-image  ">
+                   <div class="text-center align-items-start justify-content-center inner-man-div">
+                        <div class=" text-light fs-4 fw-bold mt-1 mb-3" >Printed Mens' Shirts</div>
+                           <button class=" btn btn-light  mt-1 women-shop">Shop Now <span class="bi bi-arrow-right "></span>
+                           </button>
+                        </div>
+                    </div>
+             </div>
+  <!-- 2nd row  -->
+             <div class="row gap-4 d-flex justify-content-center align-items-center mt-4">
+               <div class="col-12 col-md-6 col-lg-6 col-sm-12 div-3-col-image ">
+                <div class="d-flex align-items-start ms-4 justify-content-center inner-man-div">
+                  <div class=" text-light fs-4 fw-bold mt-1 mb-3" >Women Dresses </div>
+                  <button class=" btn btn-light  mt-1 women-shop">Shop Now <span class="bi bi-arrow-right "></span>
+                  </button>
+              </div>
+              </div>
+                <div class="col-12 col-md-4 col-lg-4 col-sm-12  div-4-col-image">
+                   <div class="d-flex align-items-center justify-content-center inner-man-div">
+                        <div class=" text-white fs-4 fw-bold  mt-1 mb-3" >Sweatshrits</div>
+                           <button class=" btn btn-light  mt-1 women-shop">Shop Now <span class="bi bi-arrow-right "></span>
+                           </button>
+                        </div>
+                    </div>
+             </div>
+         <!-- 2nd row close  -->
+             <div class="container  mt-lg-4">
+              <div class="row">
+               <h2 class="text-dark fw-bold  text-center mt-lg-4">Top Month Sellers</h2>
+                 <div class=" d-flex  justify-content-center align-items-center">
+                   <div><a href="" class="text-danger m-3 col-12">Women</a></div>
+                   <div><a href="" class="text-dark m-3 text-decoration-none col-12">Men's</a></div>
+                   <div><a href="" class="text-dark m-3 text-decoration-none col-12">Kids</a></div>
+                 </div>
+             </div>
+            </div>
+
+            <!-- card section  -->
+         <section class="Conatiner">
+                 <div class="row m-4">
+                   <div class="col-12 col-md-3 col-lg-3 col-sm-12">
+                    <div class=" my-2 card-1"> </div>
+                        <div class="text-muted text-center my-2"> Shoes</div>
+                        <div class="text-dark fw-bold text-center"> Leather mid-heel Sandals</div>
+                        <div class="text-muted text-center"> &dollar; 129.00 </div>
+                   </div> <!--col colse-->
+                   <div class="col-12 col-md-3 col-lg-3 col-sm-12">
+                    <div class="card-2 my-2"> </div>
+                      <div>
+                        <div class="text-muted text-center col my-2">Dresses </div>
+                        <div class="text-dark fw-bold text-center col"> Cotton floral print Dress </div>
+                       <div class="text-muted text-center col">&dollar; 40.00 </div>
+                     </div>
+                   </div>
+                   <div class="col-12 col-md-3 col-lg-3 col-sm-12">
+                     <div class=" card-3 my-2"> </div>
+                        <div>
+                          <div class="text-muted text-center"> Shoes</div>
+                          <div class="text-dark fw-bold text-center">  Leather Sneakers </div>
+                         <div class="text-muted text-center">&dollar; 85.00 </div>
+                       </div>
+                   </div>
+                   <div class="col-12 col-md-3 col-lg-3 col-sm-12">
+                    <div class=" card-4 my-2"> </div>
+                      <div>
+                        <div class="text-muted text-center">Tops </div>
+                        <div class="text-dark fw-bold text-center">Cropped cotton Top </div>
+                       <div class="text-muted text-center">&dollar; 29.00 </div>
+                      </div>
+                   </div>
+ <hr>
+                   <div class="row">
+                    <div class="col-12 col-md-3 col-lg-3 col-sm-12">
+                     <div class=" my-2 card-5"> </div>
+                         <div class="text-muted text-center my-2"> Dresses</div>
+                         <div class="text-dark fw-bold text-center">Floral print midi Dress </div>
+                         <div class="text-muted text-center"> &dollar; $50.00 </div>
+                    </div> <!--col colse-->
+                    <div class="col-12 col-md-3 col-lg-3 col-sm-12">
+                     <div class="card-6 my-1"> </div>
+                       <div>
+                         <div class="text-muted text-center"> Skirts </div>
+                         <div class="text-dark fw-bold text-center">Printed A-line Skirt</div>
+                         <div class="text-muted text-center">&dollar; $79.00 </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-3 col-lg-3 col-sm-12">
+                        <div class=" card-7 my-2"> </div>
+                        <div>
+                         <div class="text-muted text-center col my-2">Bags </div>
+                         <div class="text-dark fw-bold text-center col"> Suede cross body Bag </div>
+                        <div class="text-muted text-center col">&dollar; $49.00 </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3 col-sm-12">
+                     <div class=" card-8 my-2"> </div>
+                       <div>
+                         <div class="text-muted text-center">Shoes </div>
+                         <div class="text-dark fw-bold text-center">Heel strappy Sandals</div>
+                        <div class="text-muted text-center">&dollar; 29.00 </div>
+                       </div>
+                    </div>
+                 </div>
+         </section>
+         <div class="container-fluid">
+            <div class="row">
+                <div class="col  border-bottom-2 text-center">
+                   <span class="border-bottom border-1"> <a href="" class="text-dark fw-bold fs-3 ">Discover</a></span>
+                </div>
+              </div>
+            </div>
+            <hr>
+            
+
+    <div class="container">   
+        <div class="d-flex justify-content-center align-items-center mt-4">
+     <div>          
+            <h1 class="text-center text-bg-primary text-white">PRODUCT DETAILS</h1>
+            <div class="card bg-body-tertiary">
+                <div class="card-header text-center">
+                    <h2 id="proTitle" class="text-bg-light text-primary"> </h2>
+                </div>
+                <div class="card-body text-center" >
+                    <img src="" alt="" id="proImg" class="img-card-top" height="300px">
+                    <h6 id="Textdesc" class="mt-2 ms-4 w-75  text-primary"> </h6>
+                </div>
+                <div class="card-footer text-center ">
+                    <button class="btn btn-danger " onclick="preClick()"> <span class="bi bi-chevron-left"> </span> Preview</button>
+                    <button class="btn btn-danger" onclick="nextClick
+                    ()"> Next <span class="bi bi-chevron-right"> </span> </button>
+                </div>
+              </div>
+            </div>
+        </div> 
+
+    </div>
+
+     <footer class="mt-4  text-white bg-body-dark">
+                      
+                <div >
+                  <form action="" class="mt-3 ">
+                    <div class="text-center">       
+                    <label for="" class="form-lable fs-3 ">Want style Ideas and Treats?</label>
+                        <div class="text-center">
+                            <input type="text"  class="p-3 w-25 "> <button class="btn btn-light ms-3 p-3 text-uppercase fw-bold">submit</button>
+                        </div>
+                      </div>  
+                   </form>    
+
+                </div>
+                          
+               <div class="row"></div>  
+      </footer>
+</body>
+          
+</html>
+
+
+<!--   
+  
+   
+ 
+    -->
